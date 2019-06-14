@@ -1,0 +1,12 @@
+funkcja liczaca e (kiedy program ma sie zakonczyc)
+
+function count_e(P,n)
+
+    wynik= P[1][1]
+    for i in 2:n
+        wynik=wynik-P[i][1]
+        end
+    wynik=wynik*wynik
+    return wynik
+    
+end
