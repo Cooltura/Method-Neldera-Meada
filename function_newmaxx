@@ -1,0 +1,38 @@
+Szukanie nowego max ze zbioru F(P) i f(Pr)
+
+Dane 
+P-simplex
+Pr-
+f-funkcja
+h-index wczeniejszego max
+n-liczba zmiennych
+
+function newmax(P,Pr,f,h,n)
+    arg_f=zeros(Float64,1,n-1)
+    arg_h=zeros(Float64,1,n-1)
+    arg_pr=zeros(Float64,1,n-1)
+    if h!=1
+      h2=1
+    else 
+       h2=2
+    end
+  
+         for i in 1:n
+            for j in 1:n-1
+                arg_f[j]=P[i][j] 
+                arg_h[j]=P[h2][j]
+                arg_pr[j]=Pr[j]
+            end
+            if n!=h
+              if f(arg_f...)>f(arg_h...) 
+               h2=i
+              end
+            end
+          end
+            if f(arg_pr...)>f(arg_h...)
+             return true
+            else 
+             return false
+            end    
+           
+end
