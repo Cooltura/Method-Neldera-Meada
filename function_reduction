@@ -1,0 +1,11 @@
+ Wykonuje redukcję simplexu wg wzoru: Pj = 0,5*(Pj + PL) dla j = 1 .. n+1. 
+
+function reduction(P,l,n)    
+    PL=P[l]
+   
+        for i in 1:n
+            for j in 1:n-1
+            P[i][j]=0.5*(P[i][j]+PL[j])
+            end
+        end 
+end
