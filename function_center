@@ -1,0 +1,25 @@
+Obliczenie środka symetrii simplexu P
+
+Dane 
+P-simplex
+n-liczba zmiennych
+h-index najwiekszej zminnej
+
+function Center(P,h,n)
+    s=zeros(Float64,1,n-1)
+    Pc=zeros(Float64,1,n-1)
+    s2=0.0
+   
+         
+     for i in 1:n
+        if i != h
+            for j in 1:n-1
+                s[j]+=P[i][j]
+             end
+            end
+        end
+    for i in 1:n-1
+        Pc[i]=s[i]/n
+    end
+    return Pc  
+end
