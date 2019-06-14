@@ -1,0 +1,21 @@
+Wyznaczenie h taki, że f(Ph) = max spośród zbioru Fj.
+Dane
+P-simplex
+f-funkcja
+n-liczba zmiennych
+
+function maxx(P,f,n)
+    arg_f=zeros(Float64,1,n-1)
+    arg_h=zeros(Float64,1,n-1)
+    h=1
+        for i in 2:n
+            for j in 1:n-1
+                arg_f[j]=P[i][j] 
+                arg_h[j]=P[h][j]
+            end
+            if f(arg_f...)>f(arg_h...) 
+              h=i
+            end
+        end 
+    return h
+end
