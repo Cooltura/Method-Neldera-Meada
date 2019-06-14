@@ -1,0 +1,17 @@
+Sprawdza czy f(P2) jest wieksze od f(P[x])
+
+function Check(P2, P, x,f,n)
+
+    arg_p=zeros(Float64,1,n-1)
+    arg_x=zeros(Float64,1,n-1)
+     
+        for i in 1:n-1
+            arg_p[i]=P2[i]
+            arg_x[i]=P[x][i]
+        end
+       if f(arg_p...)<f(arg_x...)
+            return true
+       else
+            return false
+       end
+end
