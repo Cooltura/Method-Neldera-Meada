@@ -1,0 +1,13 @@
+ekspansja punktu P** względem P'
+P** = (1 - c)P* - cP'
+
+function expansion(Pr,Pc,P,n)
+    c=2.0
+ 
+    Pe=zeros(Float64,1,n-1)
+    for i in 1:n-1
+      Pe[i]=(1.0+c)*Pr[i]-c*Pc[i]
+    end
+  
+    return Pe   
+end
