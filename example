@@ -1,0 +1,25 @@
+f(x,y,q,w,e)=x*x+y*y+q*q+w*w+e*e
+m_Nelder(f,5)
+Wynik:
+Zmienna z1 = 0.0034981615371491555
+Zmienna z2 = 0.00737240327345717
+Zmienna z3 = 0.002805952143313209
+Zmienna z4 = -0.02958015124367596
+Zmienna z5 = 0.033956607951719425
+
+Steps = 101
+
+f(x)=x*x
+m_Nelder(f,1)
+Wynik:
+Zmienna z1 = -6.57756720909731e-5
+Steps = 18
+
+f(x,y)=(2*x+y*y)*(MathConstants.e)^x
+m_Nelder(f,2)
+Wynik:
+Zmienna z1 = -0.9191856010354494
+Zmienna z2 = -0.03801786435652086
+Steps = 101
+
+
